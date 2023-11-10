@@ -1,7 +1,7 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import LoginError from "../LoginError";
+import LoginError from "../LoginError"; // import to style the error messages
 import { Button } from "react-bootstrap";
 
 const Registration = () => {
@@ -65,6 +65,7 @@ const Registration = () => {
           onSubmit={onSubmit} // To define the submission handler for the form
         >
           <Form>
+            {/* Form fields for user registration */}
             <div>
               <div>
                 <label style={{ marginRight: "10.6rem" }} htmlFor="firstName">
@@ -80,6 +81,8 @@ const Registration = () => {
               />
               <ErrorMessage name="firstName" component={LoginError} />
             </div>
+
+            {/* Surname field */}
             <div>
               <div className="mt-3">
                 <label style={{ marginRight: "11.5rem" }} htmlFor="surname">
@@ -95,6 +98,8 @@ const Registration = () => {
               />
               <ErrorMessage name="surname" component={LoginError} />
             </div>
+
+            {/* Username field */}
             <div>
               <div className="mt-3">
                 <label style={{ marginRight: "11.1rem" }} htmlFor="username">
@@ -110,6 +115,8 @@ const Registration = () => {
               />
               <ErrorMessage name="username" component={LoginError} />
             </div>
+
+            {/* Email field */}
             <div>
               <div className="mt-3">
                 <label style={{ marginRight: "13.2rem" }} htmlFor="email">
@@ -125,6 +132,8 @@ const Registration = () => {
               />
               <ErrorMessage name="email" component={LoginError} />
             </div>
+
+            {/* Password field */}
             <div>
               <div className="mt-3">
                 <label style={{ marginRight: "11.4rem" }} htmlFor="password">
@@ -140,6 +149,8 @@ const Registration = () => {
               />
               <ErrorMessage name="password" component={LoginError} />
             </div>
+
+            {/* Confirm Password field */}
             <div>
               <div className="mt-3">
                 <label
@@ -158,6 +169,8 @@ const Registration = () => {
               />
               <ErrorMessage name="confirmPassword" component={LoginError} />
             </div>
+
+            {/* Register button */}
             <Button
               type="submit"
               style={{ marginTop: "20px" }}
