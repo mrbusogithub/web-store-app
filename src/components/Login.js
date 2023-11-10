@@ -4,7 +4,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup"; // Importing Yup for form validation schema creation.
 import LoginError from "./LoginError";
 import { Button } from "react-bootstrap";
-import { AuthContext, actionTypes } from "./store/AuthContext";
+import { AuthContext, actionTypes } from "../store/AuthContext";
 
 const Login = () => {
   const { dispatch } = useContext(AuthContext);

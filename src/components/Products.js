@@ -10,7 +10,7 @@ import "./Products.css";
 
 import { Modal } from "react-bootstrap";
 import { useDispatch } from "react-redux";
-import { addToCart } from "./store/cartSlice";
+import { addToCart } from "../store/cartSlice";
 import { BsInfoCircle } from "react-icons/bs";
 
 const Products = ({ setTotalPrice, setTotalPriceVisible }) => {

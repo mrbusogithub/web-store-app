@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { Nav, Navbar } from "react-bootstrap";
 import "./Navigation.css";
 import StoreLogo from "./images/StoreLogo.png";
-import { AuthContext } from "./store/AuthContext";
+import { AuthContext } from "../store/AuthContext";
 import TotalPrice from "./TotalPrice";
 import { useSelector } from "react-redux";
 

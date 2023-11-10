@@ -1,7 +1,7 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import LoginError from "../LoginError"; // import to style the error messages
+import LoginError from "./LoginError"; // import to style the error messages
 import { Button } from "react-bootstrap";
 
 const Registration = () => {

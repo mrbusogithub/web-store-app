@@ -7,7 +7,7 @@ import Login from "./components/Login";
 import Cart from "./components/Cart";
 import "bootstrap/dist/css/bootstrap.min.css"; // Importing Bootstrap CSS styles
 import "./App.css";
-import Registration from "./components/form-validation/Registration"; // Importing the Registration component
+import Registration from "./components/Registration"; // Importing the Registration component
 
 import React, { useState } from "react";
 

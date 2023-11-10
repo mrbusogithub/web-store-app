@@ -4,9 +4,9 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
-import { AuthProvider } from "./components/store/AuthContext"; // importing the AuthProvider component
+import { AuthProvider } from "./store/AuthContext"; // importing the AuthProvider component
 import { Provider } from "react-redux";
-import store from "./components/store/store"; // importing the store component
+import store from "./store/store"; // importing the store component
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

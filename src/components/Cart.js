@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import { removeFromCart } from "./store/cartSlice"; // Importing the removeFromCart action
+import { removeFromCart } from "../store/cartSlice"; // Importing the removeFromCart action
 import "./Cart.css"; // Importing the Cart styling
 
 function Cart() {
