@@ -1,3 +1,4 @@
+/* To adjust the marging of page heading */
 .page-content {
   margin-top: 85px; /* Adjust the margin-top as needed */
 }
@@ -9,6 +10,7 @@ html {
   background-color: gray;
 }
 
+/* To style the error messages */
 .error { 
   color: red;
 }
