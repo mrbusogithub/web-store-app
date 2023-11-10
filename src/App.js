@@ -44,7 +44,7 @@ function App() {
         {/* Route for the Registration component */}
         <Route path="/registration" element={<Registration />} />
         {/* Default route for the Home component */}
-        <Route path="/" element={<Home />} />
+        <Route exact path="/" element={<Home />} />
       </Routes>
     </div>
   );

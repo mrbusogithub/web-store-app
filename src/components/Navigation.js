@@ -35,9 +35,7 @@ const Navigation = ({ setTotalPriceVisible }) => {
           {/* Navbar content */}
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="nav ms-5">
-              <NavLink to="/" exact={true}>
-                Home
-              </NavLink>
+              <NavLink to="/">Home</NavLink>
               <NavLink to="/products">Products</NavLink>
               <NavLink to="/about">About</NavLink>
 
