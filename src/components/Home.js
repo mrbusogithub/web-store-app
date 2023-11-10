@@ -2,7 +2,7 @@ import React from "react";
 import HomePage from "./images/HomePage.jpg";
 import "./Home.css";
 import { Button } from "react-bootstrap";
-import { Link } from "react-router-dom"; // Import Link from React Router
+import { Link } from "react-router-dom"; // Importing Link from React Router
 
 function Home() {
   return (
@@ -19,7 +19,7 @@ function Home() {
         </div>
         <Link to="/registration">
           {" "}
-          {/* Provide the path to your Registration component */}
+          {/* To provide the path to your Registration component */}
           <Button variant="secondary">Register</Button>
         </Link>
       </div>

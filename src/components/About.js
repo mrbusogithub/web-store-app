@@ -17,7 +17,7 @@ function About() {
           <Figure.Image
             width={200}
             height={200}
-            alt="Sports and Fitness Store Logo"
+            alt="Sports Fever Logo"
             src={StoreLogo}
             style={{ marginBottom: "-45px" }} // To decrease the gap between logo and caption
           />
@@ -32,7 +32,7 @@ function About() {
       {/* Store Images */}
       <div className="store-images text-center">
         <Figure>
-          {/* Store Image 1 */}
+          {/* Store Image */}
           <Figure.Image
             width={700}
             height={500}

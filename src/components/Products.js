@@ -14,11 +14,17 @@ import { addToCart } from "./store/cartSlice";
 import { BsInfoCircle } from "react-icons/bs";
 
 const Products = ({ setTotalPrice, setTotalPriceVisible }) => {
-  const [cart, setCart] = useState([]); // State to track the items in the cart
+  // State to track the items in the cart
+  const [cart, setCart] = useState([]);
+  // State to track selected colors for each product
   const [selectedColors, setSelectedColors] = useState({});
+  // State to manage the visibility of the help modal
   const [showHelpModal, setShowHelpModal] = useState(false);
-  const dispatch = useDispatch();
+  // State to manage the selected shipment method
   const [selectedShipmentMethod, setSelectedShipmentMethod] = useState(null);
+
+  // Redux dispatch function
+  const dispatch = useDispatch();
 
   // Product data, an array of product objects
   const products = [
@@ -136,6 +142,7 @@ const Products = ({ setTotalPrice, setTotalPriceVisible }) => {
     },
   ];
 
+  // Function to handle adding a product to the cart
   const handleAddToCart = (product) => {
     setCart([...cart, product]);
     setTotalPrice((prevTotalPrice) => prevTotalPrice + product.price);
@@ -143,6 +150,7 @@ const Products = ({ setTotalPrice, setTotalPriceVisible }) => {
     dispatch(addToCart(product));
   };
 
+  // Function to handle color selection for a product
   const handleColorSelect = (product, color) => {
     setSelectedColors({
       ...selectedColors,
@@ -150,10 +158,12 @@ const Products = ({ setTotalPrice, setTotalPriceVisible }) => {
     });
   };
 
+  // Function to handle the "Help" button click
   const handleHelpClick = () => {
     setShowHelpModal(!showHelpModal);
   };
 
+  // Help Modal component
   const HelpModal = () => {
     return (
       <Modal show={showHelpModal} onHide={handleHelpClick}>
@@ -161,7 +171,7 @@ const Products = ({ setTotalPrice, setTotalPriceVisible }) => {
           <Modal.Title>Help</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          {/* Add your help content here */}
+          {/* Help content */}
           <h3>Shipping Options</h3>
           <p>Our store provides two shipping methods to cater to your needs:</p>
           <p>
@@ -191,6 +201,7 @@ const Products = ({ setTotalPrice, setTotalPriceVisible }) => {
     );
   };
 
+  // Function to handle shipment method selection
   const handleShipmentMethodSelect = (method) => {
     setSelectedShipmentMethod(method);
   };

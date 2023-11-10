@@ -1,7 +1,7 @@
-// Import necessary React components and libraries for the login form.
+// Importing necessary React components and libraries for the login form.
 import React, { useContext } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import * as Yup from "yup"; // Import Yup for form validation schema creation.
+import * as Yup from "yup"; // Importing Yup for form validation schema creation.
 import LoginError from "./LoginError";
 import { Button } from "react-bootstrap";
 import { AuthContext, actionTypes } from "./store/AuthContext";
@@ -9,7 +9,6 @@ import { AuthContext, actionTypes } from "./store/AuthContext";
 const Login = () => {
   const { dispatch } = useContext(AuthContext);
 
-  // Function component named Login.
   // Initial form field values
   const initialValues = {
     username: "",
@@ -29,8 +28,7 @@ const Login = () => {
 
   // Function to handle form submission
   const onSubmit = (values) => {
-    // Assuming no server-side validation
-    // Dispatch a LOGIN action with the entered username
+    // To dispatch a LOGIN action with the entered username
     dispatch({ type: actionTypes.LOGIN, payload: values.username });
   };
 

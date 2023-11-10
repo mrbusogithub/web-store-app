@@ -8,7 +8,10 @@ import TotalPrice from "./TotalPrice";
 import { useSelector } from "react-redux";
 
 const Navigation = ({ setTotalPriceVisible }) => {
+  // Accessing authentication state from context
   const { state } = useContext(AuthContext);
+
+  // Accessing cart state from Redux store
   const itemCount = useSelector((state) => state.cart.itemCount);
   const totalPrice = useSelector((state) => state.cart.totalPrice);
 
@@ -18,12 +21,18 @@ const Navigation = ({ setTotalPriceVisible }) => {
       style={{ position: "fixed", top: "0", width: "100%" }}
     >
       <div className="container-fluid px-0">
+        {/* Navigation bar */}
         <Navbar bg="myGreen" style={{ width: "100%" }} expand="lg">
+          {/* Brand logo */}
           <Navbar.Brand className="logo">
             <img src={StoreLogo} width="70px" height="55px" alt="Logo" />
             <span>Sports Fever</span>
           </Navbar.Brand>
+
+          {/* Toggle button for responsive design */}
           <Navbar.Toggle aria-controls="basic-navbar-nav" className="me-2" />
+
+          {/* Navbar content */}
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="nav ms-5">
               <NavLink to="/" exact={true}>
@@ -31,6 +40,8 @@ const Navigation = ({ setTotalPriceVisible }) => {
               </NavLink>
               <NavLink to="/products">Products</NavLink>
               <NavLink to="/about">About</NavLink>
+
+              {/* User display or login link */}
               <div className="user-display">
                 {state.isLoggedIn ? (
                   <span>{`Logged in as ${state.username}`}</span>
@@ -39,7 +50,8 @@ const Navigation = ({ setTotalPriceVisible }) => {
                 )}
                 <NavLink to="/cart">Cart ({itemCount})</NavLink>
               </div>
-              {/* Conditionally render the TotalPrice component only in the Navbar */}
+
+              {/* To display total price if it's not zero */}
               {totalPrice !== 0 && (
                 <TotalPrice
                   totalPrice={totalPrice}
