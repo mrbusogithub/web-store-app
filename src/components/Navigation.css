@@ -1,0 +1,38 @@
+.nav-header {
+    z-index: 999;
+}
+
+/* Custom CSS class to define a background color */
+.bg-myGreen {
+    background-color: #D9EFAF;
+}
+
+.logo span {
+    color: #213337;
+    font-weight: 500;
+}
+
+/* Styling for the navigation links */
+.nav a {
+    text-decoration: none;
+    padding: 10px;
+    color: black;
+    font-weight: 600;
+    font-size: 20px;
+}
+.nav a:hover {
+    cursor: pointer;
+    color: darkorange;
+    text-decoration: underline;
+    transition: 0.5;
+}
+
+.user-display {
+   margin-left: 250px;
+}
+
+.user-display span {
+    color: darkorange;
+    font-weight: 500;
+    font-size: 18px;
+}
