@@ -16,7 +16,7 @@ Before you begin, ensure you have Node.js and npm installed on your machine.
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/Sonwabiso-Buso/web-store-app.git
+   git clone https://github.com/mrbusogithub/web-store-app.git
    ```
 
 2. **Navigate to the project directory:**
